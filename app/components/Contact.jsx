@@ -4,6 +4,10 @@ import { motion } from "framer-motion";
 import { slideIn } from "./ui/motion";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+const PROFILE_ID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -11,7 +15,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const onFormSubmitted = (event) => {
+  const onFormSubmitted = async (event) => {
     event.preventDefault();
     console.log("Event submitted: ", { name, email, message });
 
@@ -28,20 +32,26 @@ const Contact = () => {
       email: email
     }
 
-    emailjs.send("service_zmue4ub", "template_0q4ujoj", templateParams, "HVZBSZB2Tqxyh4BAv").then((response) => {
-      console.log("EMAIL ENVIADO: ", response.status, response.text)
-      toast.success("Email succesfully sent.")
-      setEmail('');
-      setName('');
-      setMessage('');
-    }, (err) => {
-      console.log(err);
-      toast.error("Something went wrong while sending the e-mail");
-    })
-      .finally(() => {
-        setIsLoading(false)
-      })
+    try {
+    const response = await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    );
+
+    console.log("EMAIL ENVIADO:", response.status, response.text);
+    toast.success("Email successfully sent.");
+    setName('');
+    setEmail('');
+    setMessage('');
+  } catch (err) {
+    console.error("Email sending failed:", err);
+    toast.error("Something went wrong while sending the e-mail.");
+  } finally {
+    setIsLoading(false);
   }
+};
 
   return (
     <div id="contact" className="text-center py-16 px-4">
