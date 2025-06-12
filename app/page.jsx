@@ -66,7 +66,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>photo</div>
+          <div></div>
         </div>
       </div>
       <Technologies />
