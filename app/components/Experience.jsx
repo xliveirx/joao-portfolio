@@ -18,10 +18,10 @@ const experiences = [
     iconBg: "#6d57a2",
     date: "May 2024 - October 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Provided direct support and customer service to clients via multiple communication channels.",
+      "Contributed to internal IT management by organizing processes and improving workflow documentation.",
+      "Handled maintenance and updates for the company's WordPress website.",
+      "Assisted in organizing internal technology resources and support documentation.",
     ],
   },
   {
@@ -31,10 +31,10 @@ const experiences = [
     iconBg: "#FFFFFF",
     date: "October 2024 - Now",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Work in the IT infrastructure team, maintaining company devices and ensuring network reliability.",
+      "Troubleshoot and resolve technical issues across hardware, software, and network layers.",
+      "Responsible for the management and upkeep of all IT equipment in the company.",
+      "Contribute to continuous improvement of internal IT operations and system organization.",
     ],
   },
 ]
