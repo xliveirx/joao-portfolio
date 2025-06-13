@@ -75,6 +75,7 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="John Doe"
+                name="name"
                 className="w-full border border-accent rounded-md p-3 bg-tertiary text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
@@ -85,6 +86,7 @@ const Contact = () => {
               <label className="block mb-2 text-white font-medium">Your e-mail:</label>
               <input
                 type="email"
+                name="email"
                 placeholder="johndoe@gmail.com"
                 className="w-full border border-accent rounded-md p-3 bg-tertiary text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent"
                 onChange={(e) => setEmail(e.target.value)}
@@ -96,6 +98,7 @@ const Contact = () => {
               <label className="block mb-2 text-white font-medium">Your message:</label>
               <textarea
                 rows="5"
+                name="message"
                 placeholder="Write your message here..."
                 className="w-full border border-accent rounded-md p-3 bg-tertiary text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent"
                 onChange={(e) => setMessage(e.target.value)}
