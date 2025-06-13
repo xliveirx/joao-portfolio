@@ -49,7 +49,7 @@ const Home = () => {
             </h1>
             <p className="max-w-[500px] pt-5 mb-9 text-white/80">Hello, my name is João Oliveira. I'm 20 years old and from Brazil. I am currently studying Software Engineering with a strong passion for development and actively seeking an opportunity to start my career as a software developer.</p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <a href="/curriculo_atualizado2025.pdf" download="Joao_Oliveira_CV_2025.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/curriculo_atualizado.pdf" download="Joao_Oliveira_CV_2025.pdf" target="_blank" rel="noopener noreferrer">
                 <Button
                   variant="outline"
                   className="uppercase flex items-center gap-2"
