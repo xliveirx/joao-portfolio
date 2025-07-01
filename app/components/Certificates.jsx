@@ -35,6 +35,13 @@ const certificates = [
         language: 'Portuguese',
         link: 'https://cursos.alura.com.br/degree/certificate/7860d060-fb77-4b71-9a59-5724d3802d84?lang=pt_BR',
         date: new Date("2025-06-09")
+    },
+    {
+        name: "AWS Cloud Practicioner",
+        tags: ['Amazon Web Services'],
+        language: 'Portuguese',
+        link: 'https://www.credly.com/badges/9d24c250-64b1-4f62-b814-93cd78dc64a9/linked_in?t=syl2nf',
+        date: new Date("2025-06-28")
     }
 ]
 
